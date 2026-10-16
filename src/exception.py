@@ -1,5 +1,5 @@
 import sys 
-import logging
+from src.logger import logging
 def error_message_details(error,error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()
     file_name=exc_tb.tb_frame.f_code.co_filename
@@ -25,4 +25,4 @@ if __name__=="__main__":
     except Exception as e:
         logging.info('Logging has started')
         raise CustomException(e,sys)
-    
+       
